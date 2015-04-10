@@ -30,17 +30,18 @@
             </div>
         </div>
     </div>
-
+    <div id="about">
+    </div>
     <script>
         var locale;
-        
+
         $("#chooseLang button").click(function(event) {
             locale = $(this).attr('id');
             generatePage(locale, event);
         });
 
         function generatePage(locale, event) {
-            history.pushState("SAUCE", locale);
+            history.pushState("locale", locale);
 
             var circle = $(".hover-circle");
             var circleSize = 0;
@@ -66,8 +67,9 @@
             }, 500, function() {
                 $("#chooseLang").css("display", "none");
                 $("#about").css("display", "block");
-                //Load content
 
+                //Load content
+                showContentView();
                 circle.fadeOut(function() {
                     //Put default values
                     circle.css("width", 0);
@@ -77,26 +79,26 @@
                 });
             });
         };
-        
-        function showChooseLangView(){
-            $("#chooseLang").css("display", "block");
-                $("#about").css("display", "non");
-        }
-        
-        function showContentView(locale){
-            
-        }
-        
-        window.addEventListener('popstate', function(event) {
-            var state = event.state;
-            if (state == null) {
-                showChooseLangView();
-            } else if (state == 'en') {
-                
-            } else if (state == 'fr') {
 
+        function showChooseLangView() {
+            $("#chooseLang").css("display", "block");
+            $("#about").css("display", "none");
+        }
+
+        function showContentView() {
+            var url = "EN/index.html";
+            
+            if (locale == "fr") {
+                url = "FR/index.html";
             }
 
+            $("#about").load(url);
+        }
+
+        window.addEventListener('popstate', function(event) {
+            
+            var state = event.state;
+            showChooseLangView();  
         });
     </script>
 </body>
