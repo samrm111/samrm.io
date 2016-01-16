@@ -1,6 +1,5 @@
 html,
 body {
-    background: #fff;
     padding: 0px;
     margin: 0px;
     color: #333;
@@ -40,6 +39,15 @@ h6 {
     /* IE10+ */
     background: linear-gradient(45deg, rgba(38, 194, 129, 1) 0%, rgba(0, 218, 107, 1) 100%);
     transition: all 0.2s linear;
+}
+.main-page{
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+  background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+  -webkit-background-size: 3px 3px;
+  -moz-background-size: 3px 3px;
+  background-size: 3px 3px;
 }
 .circular-img {
     margin-left: auto;
@@ -83,7 +91,7 @@ b {
     font-weight: 600;
 }
 .font-thin {
-    font-weight: 100;
+    font-weight: 300;
 }
 #whoami .font-thin {
     font-size: 20px;
@@ -93,16 +101,9 @@ b {
 }
 #chooseLang {
     text-align: center;
-    padding: 70px;
+    padding-top: 70px;
     height: 100%;
     width: 100%;
-    background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
-    background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
-    background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
-    background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
-    -webkit-background-size: 3px 3px;
-    -moz-background-size: 3px 3px;
-    background-size: 3px 3px;
 }
 #chooseLang h1 {
     font-size: 80px;
@@ -137,15 +138,26 @@ b {
     margin-right: 10px;
     border-radius: 50%;
     color: #fff;
-    background-color: #ccc;
+    background-color: #333;
     font-size: 35px;
     height: 35px;
     width: 35px;
     text-align: center;
-    transition: all 0.2s linear;
+    transition: all 0.1s linear;
+}
+.tooltip.top .tooltip-arrow{
+    bottom:0;
+    left:50%;
+    margin-left:-5px;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:5px solid #444;
+}
+.tooltip-inner{
+    background-color: #444;
 }
 .logo span:hover {
-    background-color: #333;
+  background-color: #444;
 }
 .green-jumbo {
     background: rgb(38, 194, 129);
@@ -209,8 +221,98 @@ b {
     padding: 10px;
     margin-bottom: 25px;
 }
+#knowledge{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom : 200px;
+}
+#jobs{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom : 200px;
+}
+#jobs h1 {
+  padding-top: 40px;
+  background: #333;
+  color: #fff;
+  padding-bottom: 40px;
+}
+#knowledge .container, #jobs .container{
+  margin-top: 200px;
+}
+#knowledge h1 {
+  padding-top: 40px;
+  background: rgb(38, 194, 129);
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, rgba(38, 194, 129, 1) 0%, rgba(0, 218, 107, 1) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(38, 194, 129, 1)), color-stop(100%, rgba(0, 218, 107, 1)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, rgba(38, 194, 129, 1) 0%, rgba(0, 218, 107, 1) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, rgba(38, 194, 129, 1) 0%, rgba(0, 218, 107, 1) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, rgba(38, 194, 129, 1) 0%, rgba(0, 218, 107, 1) 100%);
+  /* IE10+ */
+  background: linear-gradient(45deg, rgba(38, 194, 129, 1) 0%, rgba(0, 218, 107, 1) 100%);
+  /* W3C */
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#26c281', endColorstr='#00da6b', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  color: #fff;
+  padding-bottom: 40px;
+}
+
+#jobs img{
+  max-height: 275px;
+  max-width: 275px;
+  margin : 30px;
+}
+#jobs img:first-of-type{
+  max-height: 200px;
+  max-width: 200px;
+}
+.row-1 img{
+  max-width: 200px;
+  max-height: 200px;
+  margin : 50px;
+}
+.row-2 img{
+  max-width: 175px;
+  max-height: 175px;
+  margin : 30px;
+
+}
+.row-3 img{
+  max-width: 125px;
+  max-height: 125px;
+  margin : 15px;
+
+}
+.row-4 img{
+  max-width: 85px;
+  max-height: 85px;
+  margin : 10px;
+
+}
+/*
+ * Small Phones
+ */
+@media screen and (max-width: 505px) {
+  #chooseLang button{
+    margin: 10px;
+    margin-top: 50px;
+    padding: 10px 30px;
+  }
+  #chooseLang h1{
+    font-size: 50px;
+  }
+  .circular-img{
+    width: 250px;
+    height: 250px;
+  }
+}
 /**
-* Mobile phone
+* Mobile phones
 */
 
 @media (max-width: 767px) {

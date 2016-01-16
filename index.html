@@ -2,105 +2,325 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Samuel Rondeau-Millaire | Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samuel Rondeau-Millaire | Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/translate.js/jquery.translate.js"></script>
 
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
 
-<body>
-    <div class="hover-circle"></div>
-    <div id="chooseLang">
-        <div class="container">
-            <div class="circular-img"></div>
-            <div class="vertical-center">
-                <h1>WELCOME</h1>
-                <h1>BIENVENUE</h1>
-                <button class="btn btn-default" id="en">ENGLISH</button>
-                <button class="btn btn-default" id="fr">FRANÇAIS</button>
-            </div>
+<body class="main-page">
+  <div class="hover-circle"></div>
+  <div id="chooseLang">
+    <div class="container">
+      <div class="circular-img"></div>
+      <div class="vertical-center">
+        <h1>WELCOME</h1>
+        <h1>BIENVENUE</h1>
+        <button class="btn btn-default" id="en">ENGLISH</button>
+        <button class="btn btn-default" id="fr">FRANÇAIS</button>
+      </div>
+    </div>
+  </div>
+  <div id="about">
+    <div class="header font-lato">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h2 class="font-thin"><b>Samuel</b> Rondeau-Millaire</h2>
+          </div>
+          <div class="col-sm-6 logo">
+            <a href="https://www.linkedin.com/in/samrm111" target="_blank">
+              <span class="fa fa-linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn"></span>
+            </a>
+            <a href="https://twitter.com/samrm111" target="_blank">
+              <span class="fa fa-twitter" data-toggle="tooltip" data-placement="top" title="Twitter"></span>
+            </a>
+            <a href="https://github.com/samrm111" target="_blank">
+              <span class="fa fa-github-alt" data-toggle="tooltip" data-placement="top" title="Github"></span>
+            </a>
+            <a href="https://google.com/+SamuelRondeauMillaire" target="_blank">
+              <span class="fa fa-google-plus" data-toggle="tooltip" data-placement="top" title="Google Plus"></span>
+            </a>
+            <a href="http://www.quora.com/Samuel-Rondeau-Millaire" target="_blank">
+              <span class="fa fa-fw" data-toggle="tooltip" data-placement="top" title="Quora">
+                <strong>Q</strong>
+              </span>
+            </a>
+
+          </div>
         </div>
+        <div class="row">
+          <div class="col-sm-8" id="whoami">
+            <h4 class="font-thin trn">Bonjour, je m'appelle <b>Samuel</b>.</h4>
+            <h4 class="font-thin trn">Je suis programmeur qui se spécialise dans le web.</h4>
+          </div>
+          <div class="col-sm-4">
+
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="about">
+    <div class="green-jumbo">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="row">
+              <h1 class="trn">Développement Backend</h1>
+            </div>
+            <div class="row">
+              <p class="trn">Selon moi, un bon développeur devrait toujours faire ses applications afin quelle soient facilement évolutives à travers le temps et l'achalandage. Lorsque je travaille sur un projet, je m'assure de bien le conceptualiser du premier coup.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <h1 class="trn">Développement Frontend</h1>
+            </div>
+            <div class="row">
+              <p class="trn">L'expérience de l'utilisateur est très importante. C'est pourquoi je m'assure d'utiliser un ensemble de technologies de dernier cri.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <h1 class="trn">Design et branding</h1>
+            </div>
+            <div class="row">
+              <p class="trn">La première chose que l'utilisateur d'un logiciel voit, est l'interface graphique. Je compte sur une application magnifique et naturelle pour que l'utilisateur se sente dans son élément.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script>
-        var locale;
 
-        $("#chooseLang button").click(function(event) {
-            locale = $(this).attr('id');
-            generatePage(locale, event);
+    <div id="world-map">
+      <div class="container">
+        <h1 class="trn">Je suis étudiant en génie logiciel, j'ai 21 ans.</h1>
+        <h1 class="trn">Je vis à Montréal, Canada.</h1>
+        <h5 class="trn">Je parle français et anglais.</h5>
+        <img src="images/worldmap.png">
+      </div>
+    </div>
+
+    <div id="jobs">
+      <h1 class="trn">Ils m'ont fait confiance</h1>
+      <div class="container">
+      <div class="row">
+        <img src="images/mtlblog.png">
+        <img src="images/narcity.png">
+        <img src="images/inventos.png">
+
+      </div>
+    </div>
+    </div>
+
+    <div id="knowledge">
+      <h1 class="trn">Ce dont je suis fier d'utiliser couramment</h1>
+
+      <div class="container">
+        <div class="row row-1">
+          <img src="images/Java-Logo.jpg">
+          <img src="images/logo_JavaScript.png">
+          <img src="images/php.png">
+        </div>
+        <div class="row row-2">
+          <img src="images/AngularJS-large.png">
+          <img src="images/symfony_black_01.png">
+          <img src="images/mongodb-logo-rgb.jpeg">
+          <img src="images/1436439824nodejs-logo.png">
+          </div>
+        <div class="row row-3">
+          <img src="images/mysql.jpg">
+          <img src="images/android-logo.jpg">
+          <img src="images/Ionic_Logo.png">
+          <img src="images/2000px-Nginx_logo.svg.png">
+          <img src="images/logo@2x.png">
+          <img src="images/1280px-JQuery_logo.svg.png">
+
+        </div>
+        <div class="row row-4">
+          <img src="images/HTML5_Logo_512.png">
+          <img src="images/css3.svg">
+          <img src="images/AmazonWebservices_Logo.svg.png">
+          <img src="images/bootstrap-logo.png">
+          <img src="images/Adobe_Photoshop_CS6_icon.svg.png">
+          <img src="images/image_01_0.png">
+        </div>
+      </div>
+
+    </div>
+    <div id="contact-me">
+      <div class="container">
+        <h1 class="trn">Vous voulez en savoir plus sur moi?</h1>
+        <h2 class="trn">Ou simplement me dire coucou ..?</h2>
+        <a class="btn btn-default trn" href="mailto:contact@samrm.io" target="_blank">Contactez moi par courriel</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var locale;
+    $("#about").css("display", "none");
+
+    $("#chooseLang button").click(function(event) {
+      locale = $(this).attr('id');
+      generatePage(locale, event);
+    });
+
+    function generatePage(locale, event) {
+      history.pushState("locale", locale);
+
+      var circle = $(".hover-circle");
+      var circleSize = 0;
+
+      //To preserve a perfect circle, select the biggest.
+      if ($(window).width() > $(window).height()) {
+        circleSize = $(window).width() * 2;
+      } else {
+        circleSize = $(window).height() * 2;
+      }
+
+      // Put hover-circle at the location of the click
+      circle.css('left', event.pageX);
+      circle.css('top', event.pageY);
+
+      // Make the cricle visible
+      circle.show();
+      circle.animate({
+        width: "+=" + circleSize,
+        height: "+=" + circleSize,
+        top: "-=" + circleSize / 2,
+        left: "-=" + circleSize / 2
+      }, 500, function() {
+        $("html, body").animate({
+          scrollTop: 0
+        }, 0);
+        $("#chooseLang").css("display", "none");
+        $("#about").css("display", "block");
+
+        //Load content
+        showContentView();
+        $("body").removeClass('main-page');
+
+        circle.fadeOut(function() {
+          //Put default values
+          circle.css("width", 0);
+          circle.css("height", 0);
+          circle.css("top", 0);
+          circle.css("left", 0);
         });
+      });
+    };
 
-        function generatePage(locale, event) {
-            history.pushState("locale", locale);
+    function showChooseLangView() {
+      $("body").addClass('main-page');
+      $("#chooseLang").css("display", "block");
+      $("#about").css("display", "none");
+    }
 
-            var circle = $(".hover-circle");
-            var circleSize = 0;
-
-            //To preserve a perfect circle, select the biggest.
-            if ($(window).width() > $(window).height()) {
-                circleSize = $(window).width() * 2;
-            } else {
-                circleSize = $(window).height() * 2;
-            }
-
-            // Put hover-circle at the location of the click
-            circle.css('left', event.pageX);
-            circle.css('top', event.pageY);
-
-            // Make the cricle visible
-            circle.show();
-            circle.animate({
-                width: "+=" + circleSize,
-                height: "+=" + circleSize,
-                top: "-=" + circleSize / 2,
-                left: "-=" + circleSize / 2
-            }, 500, function() {
-                $("#chooseLang").css("display", "none");
-                $("#about").css("display", "block");
-
-                //Load content
-                showContentView();
-                circle.fadeOut(function() {
-                    //Put default values
-                    circle.css("width", 0);
-                    circle.css("height", 0);
-                    circle.css("top", 0);
-                    circle.css("left", 0);
-                });
-            });
-        };
-
-        function showChooseLangView() {
-            $("#chooseLang").css("display", "block");
-            $("#about").css("display", "none");
-        }
-
-        function showContentView() {
-            var url = "EN/index.html";
-            
-            if (locale == "fr") {
-                url = "FR/index.html";
-            }
-
-            $("#about").load(url);
-        }
-
-        window.addEventListener('popstate', function(event) {
-            
-            var state = event.state;
-            showChooseLangView();  
+    function showContentView() {
+      if (locale != "fr") {
+        console.log('translate');
+        $('body').translate({
+          lang: "en",
+          t: dict
         });
-    </script>
+      } else {
+        $('body').translate({
+          lang: "fr",
+          t: dict
+        });
+      }
+    }
+
+    window.addEventListener('popstate', function(event) {
+
+      var state = event.state;
+      showChooseLangView();
+    });
+
+    var dict = {
+      "Bonjour, je m'appelle <b>Samuel</b>.": {
+        en: "Hi, my name is <b>Samuel</b>.",
+        fr: "Bonjour, je m'appelle <b>Samuel</b>."
+      },
+      "Je suis programmeur qui se spécialise dans le web.": {
+        en: "I 'm a programmer specialized in web devlopement.",
+        fr: "Je suis programmeur qui se spécialise dans le web."
+      },
+      "Développement Backend": {
+        en: "Backend Development",
+        fr: "Développement Backend"
+      },
+      "Selon moi, un bon développeur devrait toujours faire ses applications afin quelle soient facilement évolutives à travers le temps et l'achalandage. Lorsque je travaille sur un projet, je m'assure de bien le conceptualiser du premier coup.": {
+        en: "To me, a back end developer must think of the future. Making scalable systems to adapt over the time is my mentality. So, when I make something, I make it the best I can the first time.",
+        fr: "Selon moi, un bon développeur devrait toujours faire ses applications afin quelle soient facilement évolutives à travers le temps et l'achalandage. Lorsque je travaille sur un projet, je m'assure de bien le conceptualiser du premier coup"
+      },
+      "Développement Frontend": {
+        en: "Frontend Development",
+        fr: "Développement Frontend"
+      },
+      "L'expérience de l'utilisateur est très importante. C'est pourquoi je m'assure d'utiliser un ensemble de technologies de dernier cri.": {
+        en: "Making a good user exprience is something important to me. To do so, I am always ahead with the techniques I use and I ensure to use the best tools and programming languages.",
+        fr: "L'expérience de l'utilisateur est très importante. C'est pourquoi je m'assure d'utiliser un ensemble de technologies de dernier cri."
+      },
+      "Design et branding": {
+        en: "Design and Branding",
+        fr: "Design et branding"
+      },
+      "La première chose que l'utilisateur d'un logiciel voit, est l'interface graphique. Je compte sur une application magnifique et naturelle pour que l'utilisateur se sente dans son élément.": {
+        en: "The first thing a user of a software sees is the graphic interface. This is why a good application should always be gorgeous and natural to the user.",
+        fr: "La première chose que l'utilisateur d'un logiciel voit, est l'interface graphique. Je compte sur une application magnifique et naturelle pour que l'utilisateur se sente dans son élément."
+      },
+      "Je suis étudiant en génie logiciel, j'ai 21 ans.": {
+        en: "I'm a computer science student of 21 years old.",
+        fr: "Je suis étudiant en génie logiciel, j'ai 21 ans."
+      },
+      "Je vis à Montréal, Canada.": {
+        en: "I live in Montreal, Canada.",
+        fr: "Je vis à Montréal, Canada."
+      },
+      "Je parle français et anglais.": {
+        en: "I speak English and French.",
+        fr: "Je parle français et anglais."
+      },
+      "Vous voulez en savoir plus sur moi?": {
+        en: "Still want to know more about me?",
+        fr: "Vous voulez en savoir plus sur moi?"
+      },
+      "Ou simplement me dire coucou ..?": {
+        en: "Or just want to say hello ..?",
+        fr: "Ou simplement me dire coucou ..?"
+      },
+      "Contactez moi par courriel": {
+        en: "Contact me by mail",
+        fr: "Contactez moi par courriel"
+      },
+      "Ce dont je suis fier d'utiliser couramment": {
+        en: "What i'm proud to fluently use",
+        fr: "Ce dont je suis fier d'utiliser couramment"
+      },
+      "Ils m'ont fait confiance": {
+        en: "They trusted me",
+        fr: "Ils m'ont fait confiance"
+      }
+
+    }
+
+    // Tooltips
+    $("body").tooltip({
+      selector: '[data-toggle=tooltip]'
+    });
+  </script>
 </body>
 
 </html>
